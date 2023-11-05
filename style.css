@@ -1,0 +1,13 @@
+* {
+	font-family: system-ui;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+   -webkit-app-region: drag;
+}
+
+.header-flex-element {
+    -webkit-app-region: no-drag;
+}

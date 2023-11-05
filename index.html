@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Morfyum</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+	    name="description"
+	    content="Electron application with node"
+    >
+	<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!--meta
+        http-equiv="Content-Security-Policy" 
+        content="default-src 'self'; script-src 'self'"
+	-->
+
+	<link rel="stylesheet" type="text/css" href="productcss.css">
+    <!--link rel="stylesheet" type="text/css" href="style.css"-->
+        
+    <!--script>
+		var theme = localStorage.getItem("theme");
+		document.documentElement.className = theme
+	</script-->
+	
+</head>
+<body>
+	<header class="basebox header-flex">
+    
+		<a href="./index.html"><nav class="header-flex-element">Morfyum</nav></a>
+	    <a><nav id="toggleFullScreen" class="header-flex-element">⛶</nav></a>
+	    <a><nav id="new-test-log" class="header-flex-element">log</nav></a>
+	    <a><nav id="window-close" class="header-flex-element">Close</nav></a>
+	
+
+	    <div class="header-flex-element theme-button thb-light" id="light">
+			Light
+		</div>
+		<div class="header-flex-element theme-button thb-dark" id="dark">
+			Dark
+		</div>
+	</header>
+    
+    <div class="basebox testbox margin">
+        <label for="url-input">URL:
+        <div class="basebox"> <input type="text" placeholder="https://" id="url-input" name="url"></div>
+        <div onclick="loadUrl()" class="button">Betöltés</div>
+        </label>
+    </div>
+    
+    <div class="basebox testbox margin">
+        <div class="basebox">Node.js [<span id="node-version"></span>]</div>
+        <div class="basebox">Chromium [<span id="chrome-version"></span>]</div>
+        <div class="basebox">Electron [<span id="electron-version"></span>]</div>
+        <div class="basebox">Platform [<span id="node"></span>]</div>  
+    </div>
+    
+    <div class="basebox testbox margin">
+        INFO
+        <p id="info"></p>
+    </div>
+        
+</body>
+</html>
+
+<script src="./renderer.js"></script>
+    
+<!--script>
+	/* Set Theme with buttons */
+	function setTheme(theme) {
+		document.documentElement.className = theme
+		localStorage.setItem("theme", theme);
+		theme = localStorage.getItem("theme");
+	}
+</script>
+
+<script>
+
+ 	/* When the user clicks on the button,
+	toggle between hiding and showing the dropdown content */
+	function headerDropdown() {
+		document.getElementById("headerDropdown").classList.toggle("show");
+	}
+
+	function settingsBar() {
+		document.getElementById("settingsBar").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+		if (!event.target.matches('.header-flex-element')) {
+		    var dropdowns = document.getElementsByClassName("header-flex-dropdown");
+		    var i;
+		    for (i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) {
+					openDropdown.classList.remove('show');
+				}
+		    }
+		}
+	}
+</script-->

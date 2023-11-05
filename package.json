@@ -1,0 +1,18 @@
+{
+  "name": "org.morfyum.mpc",
+  "version": "0.1.0",
+  "description": "Morfyum Project Collection",
+  "main": "main.js",
+  "author": "Morfyum",
+  "license": "Unknown",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"🔥 Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "electron": "^23.1.0"
+  },
+  "man": [
+    "./man/elso.1"
+  ]
+}

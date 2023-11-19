@@ -515,9 +515,9 @@ body{
     min-height: 20px;
     align-items: stretch;
     flex-wrap: wrap;
-
     max-width: 100%;
 
+	 background-color: var(--default-background) !important;
     /*align-self: flex-start; /*Felülírja a függőleges kitöltést*/
     /*flex-basis: auto;*/
     /*flex-direction: row;*/

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="basebox">
 <head>
 	<meta charset="UTF-8">
 	<title>Morfyum</title>
@@ -15,7 +15,7 @@
 	-->
 
 	<link rel="stylesheet" type="text/css" href="productcss.css">
-    <!--link rel="stylesheet" type="text/css" href="style.css"-->
+    <link rel="stylesheet" type="text/css" href="style.css">
         
     <!--script>
 		var theme = localStorage.getItem("theme");
@@ -23,8 +23,8 @@
 	</script-->
 	
 </head>
-<body>
-	<header class="basebox header-flex">
+<body class="basebox">
+	<header class="basebox header-flex allow-drag">
     
 		<a href="./index.html"><nav class="header-flex-element">Morfyum</nav></a>
 	    <a><nav id="toggleFullScreen" class="header-flex-element">⛶</nav></a>
@@ -40,23 +40,27 @@
 		</div>
 	</header>
     
-    <div class="basebox testbox margin">
-        <label for="url-input">URL:
+    <div class="basebox margin">
+        <label for="url-input"><h4>URL:</h4>
         <div class="basebox"> <input type="text" placeholder="https://" id="url-input" name="url"></div>
         <div onclick="loadUrl()" class="button">Betöltés</div>
         </label>
     </div>
     
-    <div class="basebox testbox margin">
+    <div class="basebox margin">
         <div class="basebox">Node.js [<span id="node-version"></span>]</div>
         <div class="basebox">Chromium [<span id="chrome-version"></span>]</div>
         <div class="basebox">Electron [<span id="electron-version"></span>]</div>
         <div class="basebox">Platform [<span id="node"></span>]</div>  
     </div>
     
-    <div class="basebox testbox margin">
-        INFO
-        <p id="info"></p>
+    <div class="basebox margin">
+        <h4>INFO:&nbsp</h4>
+        <p class="padding" id="info"></p>
+		
+		<h4>System Theme:&nbsp</h4>
+        <p class="padding" id="system-theme"></p>
+		
     </div>
         
 </body>
@@ -65,15 +69,6 @@
 <script src="./renderer.js"></script>
     
 <!--script>
-	/* Set Theme with buttons */
-	function setTheme(theme) {
-		document.documentElement.className = theme
-		localStorage.setItem("theme", theme);
-		theme = localStorage.getItem("theme");
-	}
-</script>
-
-<script>
 
  	/* When the user clicks on the button,
 	toggle between hiding and showing the dropdown content */

@@ -16,13 +16,6 @@ contextBridge.exposeInMainWorld('electron', {
 	},
 });
 
-/*
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-    var theme = event.matches ? "dark" : "light";
-	document.documentElement.className = theme
-	localStorage.setItem("theme", theme);
-	theme = localStorage.getItem("theme");
-});*/
 
 /*
 window.addEventListener('DOMContentLoaded', () => {	
@@ -35,14 +28,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		replaceText(`${dependency}-version`, process.versions[dependency])
 	}
 })*/
-
-/*
-const chrome_versino = process.versions[chrome]
-console.log("CHROME_VERSIPN: [", chrome_versino, "]")
-
-
-window.addEventListener('DOMContentLoaded')
-*/
 
 
 contextBridge.exposeInMainWorld('versions', {
@@ -66,6 +51,8 @@ contextBridge.exposeInMainWorld('myCustomData', {
 
 let currentSystemTheme
 
+
+
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 	currentSystemTheme = 'dark';
 	console.log("Dark?", currentSystemTheme)
@@ -73,13 +60,6 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 	currentSystemTheme = 'light';
 	console.log("Light?", currentSystemTheme)
 }
-
-//currentSystemTheme = "dark"
-
-/*
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-	var theme = event.matches ? "dark" : "light";
-});*/
 
 // Saját adatok biztonságos átadása a renderelő folyamatnak
 contextBridge.exposeInMainWorld('currentThemeData', {

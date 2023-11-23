@@ -7,7 +7,7 @@
   "license": "Unknown",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"🔥 Error: no test specified\" && exit 1"
+    "test": "node ./tests/test.js"
   },
   "devDependencies": {
     "electron": "^27.0.0"

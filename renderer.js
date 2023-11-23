@@ -3,12 +3,12 @@
 //const information = document.getElementById('info');
 //information.innerText = `This app is using Chrome (v${versions.chrome()}), Node.js (v${versions.node()}), and Electron (v${versions.electron()})`;
 
-//alert("OK")
 
-
+/*
 const nodeVersion = window.versions.node()
 const nodeVersionElement = document.getElementById("node-version")
 nodeVersionElement.innerText = `${nodeVersion}`
+*/
 
 const myCustomVariable = window.myCustomData.getCustomVariable()
 const customVariableElement = document.getElementById("info")

@@ -36,25 +36,25 @@
 	</header>
     
     <div class="basebox margin-soft padding">
-        <label for="url-input"><h4>URL:</h4>
-        <div class="basebox"> <input type="text" placeholder="https://" id="url-input" name="url"></div>
+        <label for="url-input">
+			<h4>URL: <input type="text" placeholder="https://" id="url-input" name="url"> </h4>
+        
         <div onclick="loadUrl()" class="button">Betöltés</div>
         </label>
     </div>
     
     <div class="basebox margin-soft padding">
-        <div class="basebox testbox">NodeJs [<span id="node-version"></span>]</div>
-        <div class="basebox">Chromium [<span id="chrome-version"></span>]</div>
-        <div class="basebox">Electron [<span id="electron-version"></span>]</div>
-        <div class="basebox">Platform [<span id="current-platform"></span>]</div>  
+        <div class="basebox testbox padding margin-soft">NodeJs [<span id="node-version"></span>]</div>
+        <div class="basebox testbox padding margin-soft">Chromium [<span id="chrome-version"></span>]</div>
+        <div class="basebox testbox padding margin-soft">Electron [<span id="electron-version"></span>]</div>
+        <div class="basebox testbox padding margin-soft">Platform [<span id="current-platform"></span>]</div>  
     </div>
     
     <div class="basebox margin-soft padding">
         <h4>INFO:&nbsp</h4>
         <p class="padding" id="info"></p>
 		
-		<h4>System Theme:&nbsp</h4>
-        <p class="padding" id="system-theme"></p>
+		<h4>System Theme: <platform class="padding" id="system-theme"></platform></h4>
 		
     </div>
         

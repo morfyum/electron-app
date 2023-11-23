@@ -1,6 +1,6 @@
 const { app, Tray, Menu, nativeImage, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
-const { session } = require('electron')
+const session = require('electron')
 
 const createWindow = () => {
     const mainWindow = new BrowserWindow({
@@ -28,7 +28,7 @@ const createWindow = () => {
         });
       });
 
-      mainWindow.webContents.openDevTools(); // DevTools megnyitása
+      //mainWindow.webContents.openDevTools(); // DevTools megnyitása
       mainWindow.loadFile('index.html');
  };
 
@@ -43,7 +43,7 @@ const createWindow = () => {
 let tray
 
 app.whenReady().then(() => {
-    const icon = nativeImage.createFromPath('./images/logo.png')
+    const icon = nativeImage.createFromPath('./src/images/logo.png')
     tray = new Tray(icon)
 
     const contextMenu = Menu.buildFromTemplate([

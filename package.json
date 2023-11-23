@@ -15,5 +15,6 @@
   },
   "man": [
     "./man/elso.1"
-  ]
+  ],
+  "keywords": ["electron", "javascript", "morfyum"]
 }

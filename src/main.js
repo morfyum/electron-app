@@ -49,7 +49,7 @@ app.whenReady().then(() => {
     const contextMenu = Menu.buildFromTemplate([
         { label: 'Item1', type: 'normal' },
         { label: 'Item2', type: 'normal' },
-        { label: 'Item3', type: 'normal' },
+        { label: 'About', type: 'normal' },
         { label: 'Quit', type: 'normal', click: () => app.quit() }
     ])
     tray.setToolTip('MB_electron')

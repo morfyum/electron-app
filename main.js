@@ -2,12 +2,11 @@ const { app, Tray, Menu, nativeImage, BrowserWindow, ipcMain } = require('electr
 const path = require('path')
 const { session } = require('electron')
 
-
 const createWindow = () => {
     const mainWindow = new BrowserWindow({
         frame: false,
-        width: 1000,
-        height: 600,
+        width: 1145,
+        height: 680,
         icon: __dirname + '/images/logo.png',
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),

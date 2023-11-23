@@ -4,7 +4,7 @@
 
 console.log("🔥 Error: Nothing works success: ✅ ")
 //console.log("currentSystemTheme: ", currentSystemTheme)
-const {log} = require('../renderer.js')
+const {log} = require('../src/renderer.js')
 
 
 test('string with a single number should result in the number itself', () => {

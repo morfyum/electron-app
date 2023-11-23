@@ -1,6 +1,6 @@
 const { app, Tray, Menu, nativeImage, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
-const session = require('electron')
+const  { session } = require('electron')
 
 const createWindow = () => {
     const mainWindow = new BrowserWindow({

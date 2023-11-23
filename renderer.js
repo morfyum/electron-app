@@ -10,16 +10,17 @@ const nodeVersion = window.versions.node()
 const nodeVersionElement = document.getElementById("node-version")
 nodeVersionElement.innerText = `${nodeVersion}`
 
-const myCustomVariable = window.myCustomData.getCustomVariable();
+const myCustomVariable = window.myCustomData.getCustomVariable()
 const customVariableElement = document.getElementById("info")
 customVariableElement.innerText = `${myCustomVariable}`
 
-var theme = window.currentThemeData.getCustomVariable();
+var theme = window.currentThemeData.getCustomVariable()
 const themeElement = document.getElementById("system-theme")
 themeElement.innerText = `${theme}`
 setTheme(theme)
 
-document.querySelector('#new-test-log').addEventListener('click', log);
+// Query Selectors
+document.querySelector('#new-test-log').addEventListener('click', log)
 document.querySelector('#toggleFullScreen').addEventListener('click', toggleFullScreen)
 document.querySelector('#light').addEventListener('click', setThemeLight)
 document.querySelector('#dark').addEventListener('click', setThemeDark)
@@ -29,7 +30,6 @@ function windowClose() {
     window.close()
 }
 
-
 function log() {
     const test_log = "[ OK ]"
     console.log(test_log)
@@ -37,7 +37,7 @@ function log() {
 
 function toggleFullScreen() {
     if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
+        document.documentElement.requestFullscreen()
     } else {
         if (document.exitFullscreen) {
             document.exitFullscreen();
@@ -57,32 +57,32 @@ function setThemeDark() {
 /* Set Theme with buttons */
 function setTheme(theme) {
     document.documentElement.className = theme
-    localStorage.setItem("theme", theme);
-    theme = localStorage.getItem("theme");
+    localStorage.setItem("theme", theme)
+    theme = localStorage.getItem("theme")
     console.log("setTheme:", theme)
 }
 
 
 function loadUrl() {
 // Az input mező értékének lekérdezése
-const url = document.getElementById("url-input").value;
+const url = document.getElementById("url-input").value
 
 // URL érvényességének ellenőrzése
 if (!isValidUrl(url)) {
-alert("Érvénytelen URL!");
+alert("Érvénytelen URL!")
 return;
 }
 
 // Az URL betöltése
-const {shell} = require('electron');
-shell.openExternal(url);
+const {shell} = require('electron')
+shell.openExternal(url)
 }
 
 function isValidUrl(url) {
 // Egyszerű URL érvényességi ellenőrzés
 // Itt további ellenőrzéseket is végezhetsz, ha szükséges
-const regex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w.-]*)*\/?$/;
-return regex.test(url);
+const regex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w.-]*)*\/?$/
+return regex.test(url)
 }
 
 

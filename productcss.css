@@ -517,7 +517,7 @@ body{
     flex-wrap: wrap;
     max-width: 100%;
 
-	 background-color: var(--default-background) !important;
+	 background-color: var(--default-background);
     /*align-self: flex-start; /*Felülírja a függőleges kitöltést*/
     /*flex-basis: auto;*/
     /*flex-direction: row;*/

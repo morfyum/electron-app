@@ -10,6 +10,9 @@ const nodeVersionElement = document.getElementById("node-version")
 nodeVersionElement.innerText = `${nodeVersion}`
 */
 
+console.log(window.morfyumAPI)
+// => { desktop: true }
+
 const myCustomVariable = window.myCustomData.getCustomVariable()
 const customVariableElement = document.getElementById("info")
 customVariableElement.innerText = `${myCustomVariable}`
@@ -25,6 +28,8 @@ document.querySelector('#toggleFullScreen').addEventListener('click', toggleFull
 document.querySelector('#light').addEventListener('click', setThemeLight)
 document.querySelector('#dark').addEventListener('click', setThemeDark)
 document.querySelector('#window-close').addEventListener('click', windowClose)
+
+document.querySelector('#platform').addEventListener('click', log)
 
 function windowClose() {
     window.close()

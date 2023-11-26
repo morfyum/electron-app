@@ -23,21 +23,16 @@ const createWindow = () => {
             'Content-Security-Policy': [
                 "default-src 'self'",
                 "style-src 'self' https://morfyum.github.io/maincss/maincss.css https://morfyum.github.io/maincss/src/extras.css https://morfyum.github.io/maincss/src/768p.css https://morfyum.github.io/maincss/src/1280p.css https://morfyum.github.io/maincss/src/2160p.css",
-            ] 
+            ]
           },
         });
       });
 
       //mainWindow.webContents.openDevTools(); // DevTools megnyitása
+      mainWindow.openDevTools();
       mainWindow.loadFile('index.html');
+      //mainWindow.loadURL('https://morfyum.github.io/maincss/')
  };
-
-/*
-	mainWindow.openDevTools();
-    ///Content-Security-Policy': ['default-src \'self\' \'./js/\']
-	///mainWindow.loadURL('https://morfyum.github.io/maincss/')
-	mainWindow.loadFile('index.html');	
-};*/
 
 
 let tray

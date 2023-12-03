@@ -31,6 +31,8 @@ document.querySelector('#window-close').addEventListener('click', windowClose)
 
 document.querySelector('#platform').addEventListener('click', log)
 
+document.querySelector('#load-url').addEventListener('click', loadUrl)
+
 function windowClose() {
     window.close()
 }
@@ -69,18 +71,19 @@ function setTheme(theme) {
 
 
 function loadUrl() {
-// Az input mező értékének lekérdezése
-const url = document.getElementById("url-input").value
+    console.log("loadUrl: ")
+    // Az input mező értékének lekérdezése
+    const url = document.getElementById("url-input").value
 
-// URL érvényességének ellenőrzése
-if (!isValidUrl(url)) {
-alert("Érvénytelen URL!")
-return;
-}
+    // URL érvényességének ellenőrzése
+    if (!isValidUrl(url)) {
+    alert("Érvénytelen URL!")
+    return;
+    }
 
-// Az URL betöltése
-const {shell} = require('electron')
-shell.openExternal(url)
+    // Az URL betöltése
+    const {shell} = require('electron')
+    shell.openExternal(url)
 }
 
 function isValidUrl(url) {

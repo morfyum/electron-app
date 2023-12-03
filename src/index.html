@@ -37,20 +37,24 @@
 	</header>
     
     <div class="basebox margin-soft padding">
-        <label for="url-input">
-			<p> URL: 
-				<input type="text" placeholder="https://" id="url-input" name="url">
-			</p>
+        <label class="basebox" for="url-input">
+			
+				<input class="basebox row " type="text" placeholder="https://" id="url-input" name="url">
+			
         
-        <div onclick="loadUrl()" class="button">Betöltés</div>
+        <div onclick="loadUrl()" class="button row margin-soft">Betöltés</div>
         </label>
     </div>
     
-    <div class="basebox margin-soft padding">
+    <div class="basebox margin-soft padding-soft">
+		<div class="basebox row testbox padding full-center">Variables</div>
         <div class="basebox testbox padding margin-soft">NodeJs [<span id="node-version"></span>]</div>
         <div class="basebox testbox padding margin-soft">Chromium [<span id="chrome-version"></span>]</div>
         <div class="basebox testbox padding margin-soft">Electron [<span id="electron-version"></span>]</div>
-        <div class="basebox testbox padding margin-soft">Platform [<span id="current-platform"></span>]</div>  
+        <div class="basebox testbox padding margin-soft">Platform [<span id="current-platform"></span>]</div>
+
+		<div class="basebox testbox padding margin-soft">Theme [<span id="system-theme"></span>]</div>
+		<div class="basebox row testbox padding full-center">API Variables</div>
     </div>
     
     <div class="basebox margin-soft padding">

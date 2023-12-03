@@ -16,3 +16,7 @@ html, body {
 .header-flex-element {
     -webkit-app-region: no-drag;
 }
+
+#url-input {
+	background-color: var(--default-item);
+}
